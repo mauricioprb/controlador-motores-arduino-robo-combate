@@ -12,4 +12,22 @@ Em seguida, o código calcula as velocidades dos dois motores com base nas leitu
 
 Finalmente, o código controla a velocidade dos motores. Se a velocidade calculada for positiva, o pino A do motor correspondente recebe a velocidade e o pino B é definido como 0. Se a velocidade for negativa, o pino A é definido como 0 e o pino B recebe o valor absoluto da velocidade. Isso permite que os motores girem em ambas as direções, dependendo do sinal da velocidade calculada.
 
-Obs: não foi necessária a mixagem entre os dois canais
+### Componentes usados
+
+- Arduino Nano;
+
+- Ponte H L298N;
+- Bateria LiPo 7.4v 1500mah
+- Dois motores DC 6v 600rpm
+- Receptor FlySky FS-iA6B
+- Rádio controle FlySky FS-i6
+
+
+
+### Circuito
+
+![circuito](https://i.ibb.co/H7Tw8n3/circuito.png)
+
+### Autor
+
+[@mauricioprb](https://github.com/mauricioprb)
