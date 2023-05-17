@@ -34,13 +34,20 @@ void loop()
   ch1 = pulseIn(PINO_CH1, HIGH);
   ch2 = pulseIn(PINO_CH2, HIGH);
 
-  // Mapeamento dos valores de 1000-2000 para a faixa de -255 a 255
-  velocidade = map(ch1, 1000, 2000, -255, 255);
-  curva = map(ch2, 1000, 2000, -255, 255);
+  // Verifica se os pulsos são válidos antes de mapear
+  if (ch1 != 0 && ch2 != 0) {
+    // Mapeamento dos valores de 1000-2000 para a faixa de -255 a 255
+    velocidade = map(ch1, 1000, 2000, -255, 255);
+    curva = map(ch2, 1000, 2000, -255, 255);
 
-  // Cálculo das velocidades dos motores com restrição de faixa
-  velocidade_motor1 = constrain(velocidade - curva, -255, 255);
-  velocidade_motor2 = constrain(velocidade + curva, -255, 255);
+    // Cálculo das velocidades dos motores com restrição de faixa
+    velocidade_motor1 = constrain(velocidade - curva, -255, 255);
+    velocidade_motor2 = constrain(velocidade + curva, -255, 255);
+  } else {
+    // Se os pulsos não são válidos, parar os motores
+    velocidade_motor1 = 0;
+    velocidade_motor2 = 0;
+  }
 
   // Controle do motor 1
   if (velocidade_motor1 >= 0) {
