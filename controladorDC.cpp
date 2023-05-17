@@ -16,7 +16,8 @@ int curva = 0;
 int velocidade_motor1 = 0;
 int velocidade_motor2 = 0;
 
-void setup() {
+void setup()
+{
   Serial.begin(9600);
 
   pinMode(PINO_CH1, INPUT);
@@ -27,7 +28,8 @@ void setup() {
   pinMode(PINO_MOTOR2_B, OUTPUT);
 }
 
-void loop() {
+void loop()
+{
   // Leitura dos pulsos dos canais de entrada
   ch1 = pulseIn(PINO_CH1, HIGH);
   ch2 = pulseIn(PINO_CH2, HIGH);
