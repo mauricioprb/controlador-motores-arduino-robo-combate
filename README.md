@@ -26,7 +26,7 @@ Finalmente, o código controla a velocidade dos motores. Se a velocidade calcula
 
 ### Circuito
 
-![circuito](https://i.ibb.co/H7Tw8n3/circuito.png)
+![circuito](https://i.ibb.co/yfx0RdL/circuito.png)
 
 ### Autor
 
