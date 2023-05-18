@@ -29,8 +29,9 @@ void setup() {
 
 void loop() {
   // Leitura dos pulsos dos canais de entrada
-  ch1 = pulseIn(PINO_CH1, HIGH);
-  ch2 = pulseIn(PINO_CH2, HIGH);
+  ch1 = pulseIn(PINO_CH1, HIGH, 50000); // 50 ms de timeout
+  ch2 = pulseIn(PINO_CH2, HIGH, 50000); // 50 ms de timeout
+
 
   // Verifica se os pulsos são válidos antes de mapear
   if (ch1 != 0 && ch2 != 0) {
